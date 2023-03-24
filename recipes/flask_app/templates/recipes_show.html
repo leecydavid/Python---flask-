@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="d-flex justify-content-end m-3">
+        <a href="/recipes" class="me-3">Recipes</a>
+        <a href="/">Logout</a>
+    </nav>
+    <h2 class="text-center">Welcome, {{user.first_name}} </h2>
+    <h3 class="text-center">Recipe: {{recipe.name}}</h3>
+    <div class="bg-primary-subtle p-3 col-md-7 mt-5 rounded border border-primary container-sm">
+        <input type="hidden" name="id" value={{recipe.id}}>
+        <div class="mb-3">
+            <label for="first_name" class="form-label">Description:</label>
+            <p class="text-success">{{recipe.description}}</p>
+        </div>
+        <div class="form-group mb-3">
+            <label for="last_name" class="form-label">Under 30 Minutes:</label>
+            <p class="text-success">{{"Yes" if recipe.under_thirty else "No"}}</p>
+        </div>
+        <div class="form-group mb-3">
+            <label for="email" class="form-label">Instructions:</label>
+            <p class="text-success">{{recipe.instructions}}</p>
+        </div>
+        <div class="form-group mb-3">
+            <label class="form-label">Date Made:</label>
+            <p class="text-success">{{recipe.created_at}}</p>
+        </div>
+    </div>
+</body>
+
+</html>
