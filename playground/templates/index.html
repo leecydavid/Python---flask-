@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground Assignment</title>
+    <style>
+        body {
+            background-color: linen;
+            text-align: center;
+        }
+
+        .container {
+            text-align: center;
+            flex: wrap;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        .box {
+            background-color: skyblue;
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            border: solid black 2px;
+            display: inline-block;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <div class="container">
+        {%for i in range(0, num):%}
+            {%if num == num%}
+            <div class="box" style="background-color: {{color}};"></div>
+            {%endif%}
+        {%endfor%}
+    </div>
+
+
+
+</body>
+</html>
