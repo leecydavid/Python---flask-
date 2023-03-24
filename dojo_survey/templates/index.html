@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="/displayinfo" method="post" class="bg-dark container-sm p-5 col-md-5 w-30 mt-5">
+        <h3 class="text-center text-warning">Dojo Survey</h3>
+        <div class="mb-3 text-light">
+            <label class="form-label">Name:</label>
+            <input class="form-control" placeholder="Name" name="name">
+        </div>
+        <div class="mb-3 text-light">
+            <label class="form-label">Select Location:</label>
+            <select class="form-select" name="location">
+                <option selected>Select Your Location</option>
+                <option value="San Diego">San Diego</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Busan">Busan</option>
+                <option value="New York">New York</option>
+            </select>
+        </div>
+        <div class="mb-3 text-light">
+            <label class="form-label">Favorite Language:</label>
+            <select class="form-select" name="language">
+                <option selected>Select Favorite Language</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="Java Script">Java Script</option>
+                <option value="Python">Python</option>
+                <option value="C#">C#</option>
+            </select>
+        </div>
+        <div class="mb-3 text-light">
+            <label class="form-label">Comments:</label>
+            <textarea class="form-control" name="comments" rows="3"></textarea>
+        </div>
+        <button class="btn btn-primary" href="/displayinfo" type="submit">Submit</button>
+        <!-- in this case, we do not use an anchor tag because when user clicks the button, we do not need to link html file to our route in order to display information we want  -->
+            <!-- we are getting the information from the route by linking methods=[POST] as an argument -->
+                <!-- the POST method is retrieving the information from this HTML file -->
+                    <!-- the way we link this HTML to server.py:
+                        session.[] = request.form[]
+                        ex: session['name'] = request.form['name']--> 
+        <!-- set type='submit' -->
+    </form>
+
+</body>
+
+</html>
+
+<!-- request to teacher: i just dont know where to start or figure out what to do first
+are we supposed to complete a server.py first before linking HTML or should we do them both simultaneously
+self advice: get to a point where you are able to know when and how to include specific concepts 
+be able to ask yourself, what do we need here? and be able to have to have a general direction on how to find the solution-->
